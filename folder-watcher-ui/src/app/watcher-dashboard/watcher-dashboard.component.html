@@ -1,0 +1,13 @@
+<h2>Folder Watcher</h2>
+
+<input [(ngModel)]="folderPath" placeholder="Enter folder path" />
+
+<button (click)="start()">Start Watching</button>
+<button (click)="stop()">Stop</button>
+
+<ul>
+  @for( event of events;track event){
+  <li>{{ event.timestamp }} - {{ event.eventType }} - {{ event.filename }}</li>
+
+  }
+</ul>
