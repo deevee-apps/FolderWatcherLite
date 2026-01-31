@@ -5,9 +5,64 @@
 <button (click)="start()">Start Watching</button>
 <button (click)="stop()">Stop</button>
 
-<ul>
-  @for( event of events;track event){
-  <li>{{ event.timestamp }} - {{ event.eventType }} - {{ event.filename }}</li>
+<section class="tables">
+  <div class="table-block">
+    <h3>Added</h3>
+    <table class="evt-table added">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Filename</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (event of addedEvents; track event) {
+          <tr>
+            <td>{{ event.timestamp }}</td>
+            <td>{{ event.filename }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 
-  }
-</ul>
+  <div class="table-block">
+    <h3>Changed</h3>
+    <table class="evt-table changed">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Filename</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (event of changedEvents; track event) {
+          <tr>
+            <td>{{ event.timestamp }}</td>
+            <td>{{ event.filename }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table-block">
+    <h3>Deleted</h3>
+    <table class="evt-table deleted">
+      <thead>
+        <tr>
+          <th>Timestamp</th>
+          <th>Filename</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (event of deletedEvents; track event) {
+          <tr>
+            <td>{{ event.timestamp }}</td>
+            <td>{{ event.filename }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>

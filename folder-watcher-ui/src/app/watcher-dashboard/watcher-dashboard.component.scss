@@ -1,0 +1,48 @@
+h2 {
+	margin-bottom: 12px;
+}
+
+.tables {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	gap: 16px;
+	margin-top: 12px;
+}
+
+.table-block h3 {
+	margin: 0 0 8px;
+	font-size: 1rem;
+}
+
+.evt-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+.evt-table th,
+.evt-table td {
+	padding: 6px 8px;
+	border-bottom: 1px solid #eee;
+	text-align: left;
+	font-size: 0.9rem;
+}
+
+.evt-table thead {
+	font-weight: 600;
+}
+
+.evt-table.added {
+	background: #e7f7ec;
+	border-color: #b6e3c1;
+}
+
+.evt-table.changed {
+	background: #fff4e0;
+	border-color: #ffd9a1;
+}
+
+.evt-table.deleted {
+	background: #fdeaea;
+	border-color: #f5b5b5;
+}

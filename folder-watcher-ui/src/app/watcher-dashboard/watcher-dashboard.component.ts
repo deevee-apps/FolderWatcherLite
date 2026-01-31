@@ -31,4 +31,16 @@ export class WatcherDashboardComponent {
       });
     }, 2000);
   }
+
+  get addedEvents(): FileEvent[] {
+    return this.events.filter(e => e.eventType === 'added');
+  }
+
+  get changedEvents(): FileEvent[] {
+    return this.events.filter(e => e.eventType === 'changed');
+  }
+
+  get deletedEvents(): FileEvent[] {
+    return this.events.filter(e => e.eventType === 'deleted');
+  }
 }
