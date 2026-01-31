@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [22.x]
     env:
       CI: true
     steps:
@@ -35,7 +35,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: folder-watcher-backend
-        run: npm ci
+        run: npm install
 
       - name: Build backend
         working-directory: folder-watcher-backend
@@ -62,7 +62,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: folder-watcher-ui
-        run: npm ci
+        run: npm install
 
       - name: Build UI
         working-directory: folder-watcher-ui
