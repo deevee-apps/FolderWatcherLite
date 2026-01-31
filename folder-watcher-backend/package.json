@@ -1,4 +1,11 @@
 {
+  "name": "folder-watcher-backend",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/server.js",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "chokidar": "^5.0.0",
     "cors": "^2.8.6",
