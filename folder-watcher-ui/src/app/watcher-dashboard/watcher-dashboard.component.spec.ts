@@ -6,6 +6,7 @@ import { WatcherService } from '../core/services/watcher.service';
 describe('WatcherDashboardComponent', () => {
   let component: WatcherDashboardComponent;
   let fixture: ComponentFixture<WatcherDashboardComponent>;
+  let watcherServiceSpy: jasmine.SpyObj<WatcherService>;
 
   beforeEach(async () => {
     const mockService = jasmine.createSpyObj<WatcherService>('WatcherService', [
